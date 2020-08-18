@@ -1,0 +1,22 @@
+@import "vars";
+@import "libs";
+@import "mixins";
+@import "fonts";
+@import "common";
+@import "text";
+
+@import "_blocks/scroll-top";
+@import "_blocks/modal";
+@import "_blocks/article";
+@import "_blocks/button";
+@import "_blocks/input";
+
+@import "_blocks/header";
+@import "_blocks/hero";
+@import "_blocks/services";
+@import "_blocks/projects";
+@import "_blocks/consult";
+@import "_blocks/tariffs";
+@import "_blocks/steps";
+@import "_blocks/footer";
+@import "_blocks/form-callback";

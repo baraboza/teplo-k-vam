@@ -1,0 +1,143 @@
+.steps {
+
+	&__container {
+		position: relative;
+		padding-top: 35px;
+		padding-bottom: 110px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 22px;
+			right: -50px;
+			width: 435px;
+			height: 339px;
+			background-image: url('../img/steps-image.jpg');
+		}
+	}
+
+	&__title {
+		font-size: 36px;
+		line-height: normal;
+		font-weight: 700;
+		position: relative;
+		padding-bottom: 13px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			height: 3px;
+			width: 50px;
+			background-color: #ffc80c;
+		}
+	}
+
+	&__descr {
+		font-size: 20px;
+		line-height: 30px;
+		max-width: 700px;
+		margin-top: 10px;
+	}
+
+	&__list {
+		margin-top: 50px;
+	}
+
+	&__item {
+
+		&:nth-child(n + 4) {
+			margin-top: 70px;
+		}
+	}
+
+	&__item-box {
+		display: flex;
+
+		&:hover {
+
+			.steps {
+				&__number {
+					transform: translate(0, -10px);
+				}
+			}
+		}
+	}
+
+	&__number {
+		width: 68px;
+		flex-shrink: 0;
+		position: relative;
+		font-size: 36px;
+		line-height: normal;
+		font-weight: 700;
+		transition: transform 0.3s;
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50px;
+			width: 50px;
+			height: 20px;
+			background-image: url('../img/steps-arrow.svg');
+			background-repeat: no-repeat;
+		}
+	}
+
+	&__text {
+		line-height: 24px;
+		padding-right: 5px;
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.steps {
+
+		&__item {
+
+			&:nth-child(n + 3) {
+				margin-top: 70px;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.steps {
+
+		&__container {
+			padding-bottom: 40px;
+
+			&::before {
+				display: none;
+			}
+		}
+
+		&__title {
+			font-size: 24px;
+		}
+
+		&__descr {
+			font-size: 16px;
+			line-height: 22px;
+		}
+
+		&__list {
+			margin-top: 30px;
+		}
+
+		&__item {
+
+			&:nth-child(n + 2) {
+				margin-top: 30px;
+			}
+		}
+
+		&__text {
+			font-size: 14px;
+			line-height: 20px;
+		}
+	}
+}

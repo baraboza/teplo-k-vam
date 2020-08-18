@@ -1,0 +1,66 @@
+.form-callback {
+	background-color: #fff;
+	padding: 10px;
+	border-radius: 8px;
+	box-shadow: 0 5px 10px rgba(#000000, 0.5);
+	max-width: 415px;
+
+	&__inner {
+		border: 1px solid #fedc8a;
+		border-radius: 8px;
+		padding: 0 55px 30px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__icon {
+		@include circle(91px);
+		background-color: #f5f5f5;
+		@include flex-center;
+		margin: -51px auto 0;
+		box-shadow: 0 8px 16px rgba(#5a5a5a, 0.17);
+	}
+
+	&__title {
+		font-size: 30px;
+		line-height: normal;
+		margin-top: 18px;
+		font-weight: 700;
+	}
+
+	&__descr {
+		margin-top: 10px;
+		font-size: 18px;
+		line-height: 26px;
+		font-weight: 500;
+		max-width: 260px;
+		margin-bottom: 12px;
+	}
+
+	&__input {
+		margin-top: 18px;
+	}
+
+	&__button {
+		margin: 25px -12px 0;
+	}
+
+	&__checkbox-wrap {
+		margin: 35px -2px 0;
+
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.form-callback {
+
+		&__inner {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		&__title {
+			font-size: 24px;
+		}
+	}
+}

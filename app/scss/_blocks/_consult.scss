@@ -1,0 +1,119 @@
+.consult {
+	background-image: url('../img/consult-bg.jpg');
+	background-size: cover;
+	background-position: center 0;
+	padding: 55px 0 44px;
+
+	&__container {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	&__content {
+		margin-top: 55px;
+		padding-right: 50px;
+	}
+
+	&__title {
+		font-size: 36px;
+		line-height: normal;
+		font-weight: 700;
+		max-width: 600px;
+	}
+
+	&__descr {
+		font-size: 24px;
+		line-height: 32px;
+		margin-top: 18px;
+		max-width: 390px;
+		font-weight: 500;
+	}
+
+	&__form {
+		width: 410px;
+		flex-shrink: 0;
+		background-color: #fff;
+		border-radius: 8px;
+		padding: 36px 60px 40px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__form-title {
+		font-size: 18px;
+		line-height: 26px;
+		font-weight: 500;
+		max-width: 260px;
+		margin-bottom: 10px;
+	}
+
+	&__form-input {
+		margin-top: 18px;
+	}
+
+	&__form-button {
+		font-size: 14px;
+		line-height: 21px;
+		margin: 25px -12px 0;
+	}
+
+	&__form-checkbox-wrap {
+		margin-top: 35px;
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.consult {
+		background-position: 0 0;
+
+		&__container {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__content {
+			margin-top: 0;
+			padding-right: 0;
+			text-align: center;
+		}
+
+		&__descr {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&__form {
+			margin-top: 30px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.consult {
+		padding-top: 40px;
+
+		&__title {
+			font-size: 24px;
+		}
+
+		&__descr {
+			margin-top: 10px;
+			font-size: 18px;
+			line-height: 24px;
+		}
+
+		&__form {
+			max-width: 410px;
+			width: 100%;
+			padding: 20px 15px 30px;
+		}
+
+		&__form-button {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
