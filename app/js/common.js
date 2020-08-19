@@ -38,8 +38,10 @@ $('.tabs__list li').click(function(event) {
 $(window).scroll(function () {
 	if ($(this).scrollTop() > 0) {
 		$('.scroll-top').fadeIn(200);
+		$('.header').addClass('header--shadow');
 	} else {
 		$('.scroll-top').fadeOut(200);
+		$('.header').removeClass('header--shadow');
 	}
 });
 
@@ -50,7 +52,7 @@ $('.scroll-top').click(function() {
 $('.js-scroll-link').click(function(e) {
 	e.preventDefault();
 	$('html, body').animate({
-		scrollTop: $( $(this).attr('href') ).offset().top
+		scrollTop: $( $(this).attr('href') ).offset().top - 100
 	}, 1000);
 });
 
@@ -58,13 +60,20 @@ $('.projects__tabs-list a').click(function(e) {
 	e.preventDefault();
 	if ($(this).parent().hasClass('active')) return;
 	let parent = $($(this).attr('href'));
-	$('.projects__list').slick('unslick')
-	;
+	$('.projects__list').slick('unslick');
 	parent.find('.projects__list').slick({
 		prevArrow: parent.find('.projects__prev'),
 		nextArrow: parent.find('.projects__next'),
 		dots: true
 	});
+
+	let href =  $(this).attr('href') 
+	setTimeout(function() {
+		$('html, body').animate({
+			scrollTop: $(href).offset().top - 100
+		}, 1000);
+	}, 200);
+	
 });
 
 $('.projects__list-wrap').each(function(i, item) {

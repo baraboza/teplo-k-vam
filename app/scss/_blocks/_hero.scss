@@ -1,4 +1,5 @@
 .hero {
+	margin-top: 90px;
 	min-height: 710px;
 	background-image: url('../img/hero-bg.jpg');
 	background-size: cover;
@@ -82,6 +83,9 @@
 
 @include media-breakpoint-down(sm) {
 	.hero {
+		margin-top: 60px;
+		min-height: 0;
+		background-position: center 0;
 
 		&__content {
 			padding-right: 0;
@@ -103,6 +107,7 @@
 		}
 
 		&__desc {
+			display: none;
 			text-align: center;
 			font-size: 16px;
 			line-height: 22px;

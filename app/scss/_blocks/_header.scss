@@ -1,5 +1,11 @@
 .header {
 	background-color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	transition: box-shadow 0.3s;
 
 	&__container {
 		display: flex;
@@ -30,6 +36,13 @@
 		font-weight: 500;
 	}
 
+	&__item {
+
+		&--tel {
+			display: none;
+		}
+	}
+
 	&__item a, &__tel {
 		@include hover-opacity;
 	}
@@ -49,9 +62,12 @@
 	}
 }
 
+.header--shadow {
+	box-shadow: 0 5px 15px rgba(#000, 0.2);
+}
+
 @include media-breakpoint-down(lg) {
 	.header {
-		position: relative;
 
 		&__list-wrap {
 			display: none;
@@ -63,6 +79,7 @@
 			background-color: #fff;
 			padding: 20px;
 			z-index: 1;
+			border-bottom: 2px solid #999;
 		}
 
 		&__list {
@@ -72,6 +89,10 @@
 		}
 
 		&__item {
+
+			&--tel {
+				display: block;
+			}
 
 			&:nth-child(n + 2) {
 				margin-top: 15px;
